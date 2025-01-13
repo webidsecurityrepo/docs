@@ -117,11 +117,10 @@ To ensure that all the line endings in your repository match your new configurat
    git commit -m "Saving files before refreshing line endings"
    ```
 
-1. To update all files on the current branch to reflect the new configuration, run the following commands.
+1. To update all files on the current branch to reflect the new configuration, run the following command.
 
    ```shell copy
-   git rm -rf --cached .
-   git reset --hard HEAD
+   git add --renormalize .
    ```
 
 1. To display the rewritten, normalized files, run the following command.
@@ -138,7 +137,7 @@ To ensure that all the line endings in your repository match your new configurat
 
 ## Further reading
 
-* [Customizing Git - Git Attributes](https://git-scm.com/book/en/Customizing-Git-Git-Attributes) in the Pro Git book
+* [Customizing Git - Git Attributes](https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes) in the Pro Git book
 * [git-config](https://git-scm.com/docs/git-config) in the man pages for Git
-* [Getting Started - First-Time Git Setup](https://git-scm.com/book/en/Getting-Started-First-Time-Git-Setup) in the Pro Git book
+* [Getting Started - First-Time Git Setup](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup) in the Pro Git book
 * [Mind the End of Your Line](http://adaptivepatchwork.com/2012/03/01/mind-the-end-of-your-line/) by [Tim Clem](https://github.com/tclem)

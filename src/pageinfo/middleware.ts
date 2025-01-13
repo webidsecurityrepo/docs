@@ -14,7 +14,7 @@ import shortVersions from '@/versions/middleware/short-versions.js'
 import contextualize from '@/frame/middleware/context/context'
 import features from '@/versions/middleware/features.js'
 import getRedirect from '@/redirects/lib/get-redirect.js'
-import { isArchivedVersionByPath } from '@/archives/lib/is-archived-version.js'
+import { isArchivedVersionByPath } from '@/archives/lib/is-archived-version'
 import { readCompressedJsonFile } from '@/frame/lib/read-json-file.js'
 
 const router = express.Router()
@@ -131,7 +131,7 @@ export async function getPageInfo(page: Page, pathname: string) {
   const next = () => {}
   const res = {}
   await contextualize(renderingReq as ExtendedRequest, res as Response, next)
-  await shortVersions(renderingReq, res, next)
+  await shortVersions(renderingReq as ExtendedRequest, res as Response, next)
   renderingReq.context.page = page
   features(renderingReq as ExtendedRequest, res as Response, next)
   const context = renderingReq.context

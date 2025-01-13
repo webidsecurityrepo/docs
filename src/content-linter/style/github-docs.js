@@ -150,6 +150,29 @@ const githubDocsConfig = {
     severity: 'warning',
     'partial-markdown-files': true,
   },
+  'table-liquid-versioning': {
+    // GH040
+    severity: 'error',
+    'partial-markdown-files': true,
+  },
+  'third-party-action-pinning': {
+    // GH041
+    severity: 'error',
+    'partial-markdown-files': true,
+    'yml-files': true,
+  },
+  'liquid-tag-whitespace': {
+    // GHD042
+    severity: 'error',
+    'partial-markdown-files': true,
+    'yml-files': true,
+  },
+  'link-quotation': {
+    // GHD043
+    severity: 'error',
+    'partial-markdown-files': true,
+    'yml-files': true,
+  },
 }
 
 export const githubDocsFrontmatterConfig = {
@@ -191,6 +214,11 @@ export const githubDocsFrontmatterConfig = {
   'liquid-ifversion-versions': {
     // GHD022
     severity: 'warning',
+    'partial-markdown-files': false,
+  },
+  'link-quotation': {
+    // GHD043
+    severity: 'error',
     'partial-markdown-files': false,
   },
 }

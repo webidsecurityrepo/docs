@@ -29,7 +29,13 @@ Each email notification for a push to a repository lists the new commits and lin
 * The files that were changed as part of the commit
 * The commit message
 
-You can filter email notifications you receive for pushes to a repository. For more information, see "[AUTOTITLE](/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications#filtering-email-notifications)."
+You can filter email notifications you receive for pushes to a repository. For more information, see [AUTOTITLE](/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications#filtering-email-notifications).
+
+{% ifversion ghec %}
+
+>[!NOTE] Notifications for pushes to your repository will bypass restrictions for email notifications to verified domains configured in your enterprise account or organisation.
+
+{% endif %}
 
 ## Enabling email notifications for pushes to your repository
 
@@ -42,4 +48,4 @@ You can filter email notifications you receive for pushes to a repository. For m
 
 ## Further reading
 
-* "[AUTOTITLE](/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/about-notifications)"
+* [AUTOTITLE](/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/about-notifications)
