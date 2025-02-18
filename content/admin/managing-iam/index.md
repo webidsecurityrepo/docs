@@ -1,6 +1,6 @@
 ---
 title: Identity and access management
-intro: 'You can configure how people access {% ifversion ghec %}your enterprise on {% data variables.product.product_name %}{% elsif ghes %}{% data variables.location.product_location %}{% endif %}.'
+intro: 'Configure how people access your enterprise.'
 redirect_from:
   - /enterprise/admin/authentication
   - /admin/authentication
@@ -21,7 +21,7 @@ children:
   - /using-ldap-for-enterprise-iam
   - /using-saml-for-enterprise-iam
   - /configuring-authentication-for-enterprise-managed-users
-  - /provisioning-user-accounts-for-enterprise-managed-users
+  - /provisioning-user-accounts-with-scim
   - /reconfiguring-iam-for-enterprise-managed-users
   - /managing-recovery-codes-for-your-enterprise
 ---

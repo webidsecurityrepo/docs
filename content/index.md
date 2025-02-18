@@ -1,5 +1,5 @@
 ---
-title: '{% data variables.product.product_name %}{% ifversion fpt or ghec%}.com{% endif %} Help Documentation'
+title: '{% data variables.product.github %}{% ifversion fpt or ghec%}.com{% endif %} Help Documentation'
 featuredLinks:
   gettingStarted:
     - /get-started/getting-started-with-git/set-up-git
@@ -82,6 +82,7 @@ children:
   - support
   - video-transcripts
   - contributing
+  - github-models
 childGroups:
   - name: Get started
     octicon: RocketIcon
@@ -99,7 +100,15 @@ childGroups:
       - repositories
       - pull-requests
       - discussions
+  - name: GitHub Copilot
+    octicon: CopilotIcon
+    children:
       - copilot
+      - copilot/using-github-copilot/getting-code-suggestions-in-your-ide-with-github-copilot
+      - copilot/using-github-copilot/copilot-chat/prompt-engineering-for-copilot-chat
+      - copilot/using-github-copilot/copilot-chat/asking-github-copilot-questions-in-github
+      - copilot/copilot-chat-cookbook
+      - copilot/using-github-copilot/guides-on-using-github-copilot/refactoring-code-with-github-copilot
   - name: CI/CD and DevOps
     octicon: GearIcon
     children:
@@ -119,6 +128,7 @@ childGroups:
     octicon: DeviceMobileIcon
     children:
       - github-cli
+      - get-started/using-github/github-mobile
       - desktop
   - name: Project management
     octicon: ProjectIcon
@@ -126,6 +136,13 @@ childGroups:
       - issues
       - issues/planning-and-tracking-with-projects
       - search-github
+  - name: Enterprise and Teams
+    octicon: OrganizationIcon
+    children:
+      - organizations
+      - code-security/securing-your-organization
+      - admin
+      - gh-wa
   - name: Developers
     octicon: CodeSquareIcon
     children:
@@ -133,11 +150,8 @@ childGroups:
       - rest
       - graphql
       - webhooks
-  - name: Enterprise and Teams
-    octicon: OrganizationIcon
-    children:
-      - organizations
-      - admin
+      - copilot/building-copilot-extensions
+      - github-models
   - name: Community
     octicon: GlobeIcon
     children:
@@ -149,8 +163,8 @@ childGroups:
   - name: More docs
     octicon: PencilIcon
     children:
-      - electron
       - codeql
+      - electron
       - npm
 externalProducts:
   electron:
@@ -160,7 +174,7 @@ externalProducts:
     external: true
   codeql:
     id: codeql
-    name: CodeQL
+    name: CodeQL query writing
     href: 'https://codeql.github.com/docs'
     external: true
   npm:
@@ -168,5 +182,9 @@ externalProducts:
     name: npm
     href: 'https://docs.npmjs.com/'
     external: true
+  gh-wa:
+    id: gh-wa
+    name: GitHub Well-Architected
+    href: 'https://wellarchitected.github.com/'
+    external: true
 ---
-

@@ -50,7 +50,7 @@ being interpreted as source-code alerts, use
 
 \[Mandatory] Path to the CodeQL database to query.
 
-#### `<querysuite|pack>...`
+#### `<query|dir|suite|pack>...`
 
 Queries to execute. Each argument is in the form `scope/name@range:path`
 where:
@@ -167,6 +167,13 @@ This option has no effect when passed to [codeql bqrs interpret](/code-security/
 
 Available since `v2.15.2`.
 
+#### `--no-sarif-include-alert-provenance`
+
+\[Advanced] \[SARIF formats only] Do not include alert provenance
+information in the SARIF output.
+
+Available since `v2.18.1`.
+
 #### `--[no-]sarif-group-rules-by-pack`
 
 \[SARIF formats only] Place the rule object for each query under its
@@ -183,6 +190,11 @@ as a plain string.
 
 \[SARIF formats only] Produce pretty-printed SARIF output. By default,
 SARIF output is minified to reduce the size of the output file.
+
+#### `--sarif-run-property=<String=String>`
+
+\[SARIF formats only] A key value pair to add to the generated SARIF
+'run' property bag. Can be repeated.
 
 #### `--no-group-results`
 

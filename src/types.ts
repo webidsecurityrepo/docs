@@ -100,11 +100,9 @@ type Redirects = {
   [key: string]: string
 }
 
-type Features = {
-  [feature: string]: boolean
-}
-
-export type Context = Features & {
+export type Context = {
+  // Allows dynamic properties like features & version shortnames as keys
+  [key: string]: any
   currentCategory?: string
   error?: Error
   siteTree?: SiteTree
@@ -167,6 +165,7 @@ export type Context = Features & {
   currentLearningTrack?: LearningTrack | null
   renderedPage?: string
   miniTocItems?: string | undefined
+  markdownRequested?: boolean
 }
 export type LearningTracks = {
   [group: string]: {
@@ -300,6 +299,7 @@ export type SecretScanningData = {
   isPrivateWithGhas: boolean
   hasPushProtection: boolean
   hasValidityCheck: boolean | string
+  isduplicate: boolean
 }
 
 type Language = {
@@ -356,6 +356,10 @@ export type Page = {
   effectiveDate?: string
   fullTitle?: string
   render: (context: Context) => Promise<string>
+  octicon?: string
+  category?: string[]
+  complexity?: string[]
+  industry?: string[]
 }
 
 type ChangeLog = {
